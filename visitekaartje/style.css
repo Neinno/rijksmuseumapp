@@ -1,0 +1,128 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color:#03023B;
+    --main-text:black;
+    --banner-color:#E6E6E6;
+    --header-text:#E6E6E6;
+}
+
+body {
+    font-family: sans-serif;
+    color:var(--main-text);
+}
+
+main {
+    margin: 1rem auto;
+    width: 265px;
+    height: 454px;
+    position: relative;
+    background: rgb(2,0,36);
+    border-radius: .5rem;
+    box-shadow: 2px 4px 4px black;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(255,255,255,1) 100%);
+}
+
+main > section:first-of-type {
+    text-align: center;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 0 0 50px 50px;
+    z-index: 5;
+    position: relative;
+    border-radius: inherit;
+}
+
+h1 {
+    color: var(--header-text)
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    height: 50%;
+    justify-content: space-evenly;
+}
+
+ul li {
+    color: var(--main-text);
+    background-color: var(--banner-color);
+    width:  50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 25px 0 25px;
+    border-color: var(--banner-color) transparent transparent transparent;
+}
+
+ul li:nth-child(odd) {
+    height: 80%;
+}
+
+ul li section {
+    transform: rotate(90deg);
+}
+
+.banner {
+    background-color: var(--banner-color);
+    position: absolute;
+    top: -400px;
+    left: 50%;
+    width: 210px;
+    height: 55%;
+    transform: translateX(-50%);
+    z-index: 3;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.banner:after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 102.5px 0 102.5px;
+    border-color: var(--banner-color) transparent transparent transparent;
+}
+
+.banner-down {
+    top: 35px;
+    transition: 1s;
+}
+
+footer {
+    background-color: var(--main-color);
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    border-radius: 0 0 .5rem .5rem;
+}
+
