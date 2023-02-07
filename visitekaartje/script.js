@@ -49,20 +49,27 @@ function closeBannerThree() {
 
 
 function fetchData() {
-
-    const url = 'https://whois.fdnd.nl/api/v1/members'
+    
+    const url = 'https://whois.fdnd.nl/api/v1/member?id=cldepb44w3wgj0bw5p75vk78v'
     const data = fetch(url)
         .then(response => response.json())
         .then(data => {
-            changeHTML(data)
             console.log(data)
+            changeHTML(data)
         })
 }
 
 function changeHTML (data) {
-    const name = data.members[10].name + ' ' + data.members[10].surname
-    document.querySelector("main > section:nth-of-type(2) p").innerHTML = name;
+    const name = data.member.name + '  ' + data.member.surname
+    const github = data.member.website
+
+    const githubLink = document.querySelector("main > section:last-of-type a")
+
+    document.querySelector("main > section:nth-of-type(1) h1").innerHTML = name;
+    githubLink.setAttribute("href", github);
+    
 }
+
 
 
 
