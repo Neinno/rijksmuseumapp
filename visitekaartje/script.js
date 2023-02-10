@@ -63,13 +63,20 @@ function changeHTML (data) {
     const name = data.member.name + '  ' + data.member.surname
     const github = data.member.website
     const bio = data.member.bio.html
-
+    const avatar = data.member.avatar
     const githubLink = document.querySelector("main > section:last-of-type a")
 
+    // Set Name
     document.querySelector("main > section:nth-of-type(1) h1").innerHTML = name;
+
+    // Set Github link
     githubLink.setAttribute("href", github);
 
+    // Set bio
     document.querySelector("main > footer p").innerHTML = bio;
+
+    // Set avatar
+    document.querySelector("footer img").src= avatar;
     
 }
 

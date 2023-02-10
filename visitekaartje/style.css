@@ -168,6 +168,12 @@ footer {
     font-variant: small-caps;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+footer img {
+    max-height: 2em;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
 }
 
