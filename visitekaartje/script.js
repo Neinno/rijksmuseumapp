@@ -62,11 +62,14 @@ function fetchData() {
 function changeHTML (data) {
     const name = data.member.name + '  ' + data.member.surname
     const github = data.member.website
+    const bio = data.member.bio.html
 
     const githubLink = document.querySelector("main > section:last-of-type a")
 
     document.querySelector("main > section:nth-of-type(1) h1").innerHTML = name;
     githubLink.setAttribute("href", github);
+
+    document.querySelector("main > footer p").innerHTML = bio;
     
 }
 
