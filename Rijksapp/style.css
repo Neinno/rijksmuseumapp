@@ -1,0 +1,53 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color:#40474F;
+    --header-text: #ffffff;
+    --main-text:black;
+}
+
+body {
+    font-family: sans-serif;
+    color:var(--main-text);
+}
+
+header {
+    background-color: var(--main-color);
+    text-align: center;
+    font-size: 1em;
+    padding: .5em;
+    color: var(--header-text);
+    border-radius: 0 0 .5em .5em;
+}
+
+main form input[type=text]{
+    display: flex;
+    width: 80vw;
+    max-width: 300px;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: .5em;
+    border-style: hidden;
+    background-color: lightgray;
+}
+
+main section {
+    margin: 1em;
+}
+
+main section h2 {
+    color: var(--main-text);
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+main section:first-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+
