@@ -77,7 +77,6 @@ function changeHTML (data) {
 
     // Set avatar
     document.querySelector("footer img").src= avatar;
-    
 }
 
 
