@@ -17,17 +17,20 @@ body {
 
 header {
     background-color: var(--main-color);
-    text-align: center;
     font-size: 1em;
-    padding: .5em;
+    padding: 1em;
     color: var(--header-text);
-    border-radius: 0 0 .5em .5em;
+}
+
+header h1, main {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 main form input[type=text]{
     display: flex;
     width: 80vw;
-    max-width: 300px;
+    max-width: 500px;
     padding: 1em;
     margin: 1em auto;
     border-radius: .5em;
@@ -48,6 +51,10 @@ main section h2 {
 main section:first-of-type {
     display: flex;
     flex-direction: column;
+}
+
+main section:nth-of-type(2) {
+
 }
 
 
