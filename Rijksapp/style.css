@@ -53,5 +53,30 @@ main section:first-of-type {
     flex-direction: column;
 }
 
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
 
+main section:nth-of-type(2) figure {
+    border-radius: 2em;
+    position: relative;
+}
+
+main section:nth-of-type(2) figure img {
+    width: 100%;
+    border-radius: 2em;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+main section:nth-of-type(2) figure figcaption {
+    position: absolute;
+    bottom: 2em;
+    padding: 1em;
+    text-align: center;
+    background-color: rgba(255,255,255,.5);
+    width: 100%;
+}
 
