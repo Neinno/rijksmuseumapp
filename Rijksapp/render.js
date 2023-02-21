@@ -1,9 +1,6 @@
-export function render(data) {
-    
-    const artContainer = document.querySelector('main > section:nth-of-type(2)')
-    artContainer.textContent = "Data aan het ophalen...";
+export function render(data) {   
 
-    artContainer.textContent="";
+    const artContainer = document.querySelector('main > section:nth-of-type(2)')
 
     data.artObjects.forEach(data => {
         const createLink = document.createElement("a");
