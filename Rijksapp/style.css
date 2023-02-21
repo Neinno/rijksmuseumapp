@@ -6,6 +6,7 @@
 
 :root {
     --main-color:#40474F;
+    --secondary-color: #D55140;
     --header-text: #ffffff;
     --main-text:black;
 }
@@ -15,11 +16,25 @@ body {
     color:var(--main-text);
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
 header {
-    background-color: var(--main-color);
-    font-size: 1em;
-    padding: 1em;
     color: var(--header-text);
+    height: 50vh;
+    width: 100%;
+    background-color: var(--main-color);
+    background-image: url("assets/images/headerimage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    padding: 1em 1em;
+    text-transform: uppercase;
 }
 
 header h1, main {
@@ -27,15 +42,20 @@ header h1, main {
     margin: 0 auto;
 }
 
+main form {
+    margin: 1em;
+}
+
 main form input[type=text]{
-    display: flex;
-    width: 80vw;
-    max-width: 500px;
+    width: 100%;
     padding: 1em;
-    margin: 1em auto;
     border-radius: .5em;
     border-style: hidden;
     background-color: lightgray;
+}
+
+h2 {
+    margin: 0 1em;
 }
 
 main section {
@@ -65,8 +85,9 @@ main section:nth-of-type(2) figure {
     cursor: pointer;
 }
 
-main section:nth-of-type(2) figure img:hover {
-    border-radius: .5em;
+main section:nth-of-type(2) figure:hover img {
+    border-radius: .5em;    
+    box-shadow: .2em .2em .2em var(--main-color);
 }
 
 main section:nth-of-type(2) figure img {
@@ -75,6 +96,7 @@ main section:nth-of-type(2) figure img {
     aspect-ratio: 1/1;
     object-fit: cover;
     transition: .5s;
+    box-shadow: 5px;
 }
 
 main section:nth-of-type(2) figure figcaption {
