@@ -68,12 +68,7 @@ main section h2 {
     margin: 1em 0;
 }
 
-main section:first-of-type {
-    display: flex;
-    flex-direction: column;
-}
-
-main section:nth-of-type(2) {
+main section:nth-of-type(1) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
@@ -134,18 +129,18 @@ main section:nth-of-type(2) {
 }
 
 
-main section:nth-of-type(2) figure {
+main section:nth-of-type(1) figure {
     border-radius: 2em;
     position: relative;
     cursor: pointer;
 }
 
-main section:nth-of-type(2) figure:hover img {
+main section:nth-of-type(1) figure:hover img {
     border-radius: .5em;    
     box-shadow: .2em .2em .2em var(--main-color);
 }
 
-main section:nth-of-type(2) figure img {
+main section:nth-of-type(1) figure img {
     width: 100%;
     border-radius: 2em;
     aspect-ratio: 1/1;
@@ -154,7 +149,7 @@ main section:nth-of-type(2) figure img {
     box-shadow: 5px;
 }
 
-main section:nth-of-type(2) figure figcaption {
+main section:nth-of-type(1) figure figcaption {
     position: absolute;
     bottom: 2em;
     padding: 1em;

@@ -1,6 +1,6 @@
 export function render(data) {   
 
-    const artContainer = document.querySelector('main > section:nth-of-type(2)')
+    const artContainer = document.querySelector('main > section:nth-of-type(1)')
 
     data.artObjects.forEach(data => {
         const createLink = document.createElement("a");

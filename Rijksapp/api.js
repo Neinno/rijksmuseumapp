@@ -1,16 +1,22 @@
 import { render } from "./render.js";
 import { loader } from "./loader.js";
+import { searchObject } from "./search.js";
 
-export function fetchData() {
+export function fetchData(searchInput = '') {
 
-    const artContainer = document.querySelector('main > section:nth-of-type(2)')
-    
+    const artContainer = document.querySelector('main > section:nth-of-type(1)')
+    document.querySelector('form input[name="searchbar"]').addEventListener('keyup', searchObject)
 
     loader();
 
+    const urlApi = "https://www.rijksmuseum.nl/api/nl/collection";
     const apikey = "0TyrFANJ";
-    const url = `https://www.rijksmuseum.nl/api/nl/collection?key=`+apikey+`&p=10`;
-    
+    const ifImage = "imgonly=true";
+    const sortedBy = "chronologic";
+    const resultAmount = "ps=20";
+
+    const url = urlApi+`?key=`+apikey+`&q=`+searchInput+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
+
     const data = fetch(url)
 
         .then((response) => {

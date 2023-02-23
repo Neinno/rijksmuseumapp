@@ -1,5 +1,5 @@
 export function loader() {
-    const artContainer = document.querySelector('main > section:nth-of-type(2)')
+    const artContainer = document.querySelector('main > section:nth-of-type(1)')
 
     artContainer.textContent="";
 
