@@ -2,7 +2,7 @@ import { render } from "./render.js";
 import { loader } from "./loader.js";
 import { searchObject } from "./search.js";
 
-export function fetchData(searchInput = '') {
+export function fetchData() {
 
     const artContainer = document.querySelector('main > section:nth-of-type(1)')
     document.querySelector('form input[name="searchbar"]').addEventListener('keyup', searchObject)
@@ -14,8 +14,9 @@ export function fetchData(searchInput = '') {
     const ifImage = "imgonly=true";
     const sortedBy = "chronologic";
     const resultAmount = "ps=20";
+    // const objectId = "";
 
-    const url = urlApi+`?key=`+apikey+`&q=`+searchInput+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
+    const url = urlApi+`?key=`+apikey+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
 
     const data = fetch(url)
 

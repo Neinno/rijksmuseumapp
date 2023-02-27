@@ -1,15 +1,12 @@
 import { fetchData } from './api.js'
 import { loader } from './loader.js'
 import { render } from './render.js'
-import { searchObject } from './search.js'
+import { searchObject, fetchSearch } from './search.js'
+import { renderDetail } from './renderDetail.js';
 
 fetchData();
 render();
 loader();
 searchObject();
-
-function routeChanged() {
-    console.log("Now viewing this art object...")
-}
-
-window.addEventListener("hashchange", routeChanged)
+fetchSearch();
+renderDetail();

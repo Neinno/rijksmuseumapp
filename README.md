@@ -73,6 +73,9 @@ function loader() {
 };
 ```
 
+### Activity Diagram
+Een Activity Diagram
+
 ### Modules
 Om mijn code meer structuur te geven heb ik gebruik gemaakt van modules. Dit zorgt ervoor dat ik mijn functies in aparte bestanden kan zetten en krijg ik meer overzicht. Modules kan je gebruiken door dit in je HTML te zetten:
 
@@ -89,3 +92,4 @@ import { render } from './render.js'
 ```
 
 ### Routes
+
