@@ -19,7 +19,6 @@ export function fetchSearch(searchInput="") {
     const ifImage = "imgonly=true";
     const sortedBy = "chronologic";
     const resultAmount = "ps=20";
-    // const objectId = "";
 
     const url = urlApi+`?key=`+apikey+`&q=`+searchInput+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
 
