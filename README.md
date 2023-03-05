@@ -1,6 +1,12 @@
 # Web App From Scratch @cmda-minor-web 2021 - 2022
 Tijdens Web App From Scratch ben ik begonnen met het maken van een visite kaartje. Voor mij was dit vooral weer even oefenen met HTML, CSS en JS. Dit had ik namelijk een lange tijd niet gedaan.
 
+### Link naar demo:
+https://neinno.github.io/rijksmuseumapp/Rijksapp/
+
+
+<img src="/readmeimgs/frontend.png" height=300px>
+
 ## Rijksmusuem app
 Voor de eindopdracht van dit vak was er een keuze uit een paar user stories. De user story die ik gekozen heb is:
 ```
@@ -13,6 +19,18 @@ Bij deze userstory hoort de API van het rijksmuseum.
 [Link met infomratie over de API](https://www.rijksmuseum.nl/nl/onderzoek/onderzoek-doen/data)
 
 [Object meta data](https://data.rijksmuseum.nl/object-metadata/)
+
+
+### How to install:
+Om dit project te instaleren op je eigen computer moet je deze repository clonen. Dit kan je doen door gebruik te maken github desktop, of gebruik te maken van je terminal en de volgende command uit te voeren.
+```
+git clone https://github.com/Neinno/rijksmuseumapp.git
+```
+
+Open daarna het project in VS code en zet live server aan om het vervolgens te bekijken op je eigen computer.
+
+
+## Proces
 
 ### Design
 Ik ben begonnen met het maken van een simpel design wat ik kan aanhouden tijdens het maken van de opdracht. Dit zorgt ervoor dat een bepaalde structuur volg in mijn styling. Ik heb ervoor gekozen om een zoekbalk, categorieën en een discover sectie toe te voegen. Ook is het de bedoeling dat er een detail pagina komt, die meer informatie geeft over het object of schilderij als er op geklikt word.
@@ -76,6 +94,10 @@ function loader() {
 ### Activity Diagram
 Een Activity Diagram
 
+
+<img src="/readmeimgs/activityDiagram.png" height=300px>
+
+
 ### Modules
 Om mijn code meer structuur te geven heb ik gebruik gemaakt van modules. Dit zorgt ervoor dat ik mijn functies in aparte bestanden kan zetten en krijg ik meer overzicht. Modules kan je gebruiken door dit in je HTML te zetten:
 
@@ -91,5 +113,21 @@ import { loader } from './loader.js'
 import { render } from './render.js'
 ```
 
+Daarna ben ik alle modules in een aparte map gaan zetten zodat alles overzichtelijk is.
+
 ### Routes
 
+
+### Checklist
+- [x] Opdracht kiezen
+- [x] Data fetch uit de API
+- [x] Data laten zien op het scherm
+- [x] States aanmaken
+- [x] Zoek functie
+- [x] Modules aanmaken
+- [x] Structuur aanpassen
+- [ ] Routes toevoegen
+- [ ] Categorien toevoegen
+- [ ] Progressive enhancements
+- [ ] Design verbeteren
+- [ ] CSS aanpassen
