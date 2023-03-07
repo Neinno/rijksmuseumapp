@@ -116,7 +116,22 @@ import { render } from './render.js'
 Daarna ben ik alle modules in een aparte map gaan zetten zodat alles overzichtelijk is.
 
 ### Routes
+Mijn volgende stap was het toevoegen van routes. Dit is iets wat ik niet voor elkaar kreeg in het begin. Ik heb geprobeerd om het zelf te maken via hashchange. Na veel proberen heb ik het geprobeerd met routie. Dit is iets wat wel werkte. Dit is de code die ik heb gebruikt voor de router zodat de home, en de detail pagina werkt.
 
+```js
+export function router() {
+
+    routie({
+        'home': () => {
+            fetchData();
+        },
+        'detail/:id': id => {
+            renderDetail(id);
+        }
+    });
+
+}
+```
 
 ### Checklist
 - [x] Opdracht kiezen
@@ -126,7 +141,7 @@ Daarna ben ik alle modules in een aparte map gaan zetten zodat alles overzichtel
 - [x] Zoek functie
 - [x] Modules aanmaken
 - [x] Structuur aanpassen
-- [ ] Routes toevoegen
+- [x] Routes toevoegen
 - [ ] Categorien toevoegen
 - [ ] Progressive enhancements
 - [ ] Design verbeteren

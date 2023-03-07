@@ -19,7 +19,6 @@ export function fetchData() {
     const url = urlApi+`?key=`+apikey+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
 
     const data = fetch(url)
-
         .then((response) => {
             if (response.status >= 200 && response.status <= 299) {
                 return response.json();
@@ -29,8 +28,7 @@ export function fetchData() {
         })
         .then((data) => {
             artContainer.textContent="";
-            render(data)    
-
+            render(data)   
     }).catch((error) => {
         console.log(error);
     })

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rijks museum app</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -24,7 +25,7 @@
         <section id="art">
             <div id="error">
                 <p>Er was een probleem met het ophalen van de data. Probeer het opnieuw.</p>
-                <button href="index.html">Reload</button>
+                <button onClick="history.go(0);">Reload</button>
             </div>
         </section>
 
@@ -39,6 +40,7 @@
         </nav>
     </footer>
 
+    <script src="libraries/routie.js"></script>
     <script type="module" src="script.js"></script> 
 </body>
 </html>

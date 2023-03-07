@@ -1,51 +1,55 @@
+const detailSection = document.getElementById("detail-page");
+const artContainer = document.querySelector('main > section:nth-of-type(1)');
+
 export function render(data) {   
+    detailSection.innerHTML = "";
+    const artContainer = document.querySelector('main > section:nth-of-type(1)');
+    const objects = data.artObjects;
 
-    const artContainer = document.querySelector('main > section:nth-of-type(1)')
-
-    data.artObjects.forEach(data => {
+    objects.forEach(artObject => {
         const createLink = document.createElement("a");
-        createLink.setAttribute("href", "#" + data.objectNumber)
+        createLink.setAttribute("href", "#detail/" + artObject.objectNumber)
         artContainer.appendChild(createLink)
 
         const createFigure = document.createElement("figure");
         createLink.appendChild(createFigure);
 
         const createFigcaption = document.createElement("figcaption");
-        createFigcaption.textContent = data.title;
+        createFigcaption.textContent = artObject.title;
         createFigure.appendChild(createFigcaption);
 
         const createImage = document.createElement("img");
-        createImage.src = data.webImage.url;
+        createImage.src = artObject.webImage.url;
         createFigure.appendChild(createImage);
     })
-
 };
 
-export function renderDetailPage() {
+export function renderDetail(id) {
+    artContainer.innerHTML = "";
     const urlApi = "https://www.rijksmuseum.nl/api/nl/collection";
     const apikey = "0TyrFANJ";
     
-    const objectNumber = location.hash.slice(1);
-    fetch(`${urlApi}/${objectNumber}?key=${apikey}`)
+    fetch(`${urlApi}/${id}?key=${apikey}`)
       .then(response => response.json())
       .then(data => {
         const object = data.artObject;
         const title = object.title;
         const image = object.webImage.url;
         const description = object.description;
-        const detailPage = document.getElementById(detail-page);
-  
-        createTitle = document.createElement("h1");
+        
+        const createTitle = document.createElement("h1");
         createTitle.textContent = title;
-        detailPage.appendChild(createTitle)
+        detailSection.appendChild(createTitle)
   
-        createImg = document.createElement("img");
+        const createImg = document.createElement("img");
         createImg.src = image;
-        detailPage.appendChild(createImg)
+        detailSection.appendChild(createImg)
   
-        createDescription = document.createElement("p");
+        const createDescription = document.createElement("p");
         createDescription.textContent = description;
-        detailPage.appendChild(createDescription)
+        detailSection.appendChild(createDescription)
       })
-      .catch(error => console.error(error));
+      .catch((error) => {
+        console.log(error);
+    })
   }
