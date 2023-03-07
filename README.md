@@ -148,8 +148,8 @@ export function router() {
 - [ ] CSS aanpassen
 
 ### Bronnen
-[Main repository van dit vak](https://github.com/cmda-minor-web/web-app-from-scratch-2223)
-[RijksMuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
-[Data Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-[Routie](http://projects.jga.me/routie/)
-[History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+- [Main repository van dit vak](https://github.com/cmda-minor-web/web-app-from-scratch-2223)
+- [RijksMuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
+- [Data Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Routie](http://projects.jga.me/routie/)
+- [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
