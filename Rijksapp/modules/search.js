@@ -7,7 +7,7 @@ export function searchObject() {
     fetchSearch(searchInput)
 }
 
-export function fetchSearch(searchInput="") {
+export function fetchSearch(searchInput) {
 
     const artContainer = document.querySelector('main > section:nth-of-type(1)')
     document.querySelector('form input[name="searchbar"]').addEventListener('keyup', searchObject)
