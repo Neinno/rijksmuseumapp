@@ -95,7 +95,7 @@ function loader() {
 Een Activity Diagram
 
 
-<img src="/readmeimgs/activityDiagram.png" height=300px>
+<img src="/readmeimgs/activityDiagram.png" height=500px>
 
 
 ### Modules
