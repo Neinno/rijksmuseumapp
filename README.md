@@ -142,6 +142,8 @@ export function router() {
 - [x] Modules aanmaken
 - [x] Structuur aanpassen
 - [x] Routes toevoegen
+- [x] Data filteren
+- [ ] Fetch opschonen
 - [ ] Categorien toevoegen
 - [ ] Progressive enhancements
 - [ ] Design verbeteren
