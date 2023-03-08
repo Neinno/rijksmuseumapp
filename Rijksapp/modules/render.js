@@ -1,27 +1,27 @@
 const detailSection = document.getElementById("detail-page");
 const artContainer = document.querySelector('main > section:nth-of-type(1)');
 
-export function render(data) {   
+export function render(filterData) {   
     detailSection.innerHTML = "";
     const artContainer = document.querySelector('main > section:nth-of-type(1)');
-    const objects = data.artObjects;
+    const objects = filterData;
     artContainer.style.display = "grid";
     detailSection.classList.remove("detail-slide")
 
-    objects.forEach(artObject => {
+    objects.forEach(art => {
         const createLink = document.createElement("a");
-        createLink.setAttribute("href", "#detail/" + artObject.objectNumber)
+        createLink.setAttribute("href", "#detail/" + art.number)
         artContainer.appendChild(createLink)
 
         const createFigure = document.createElement("figure");
         createLink.appendChild(createFigure);
 
         const createFigcaption = document.createElement("figcaption");
-        createFigcaption.textContent = artObject.title;
+        createFigcaption.textContent = art.title;
         createFigure.appendChild(createFigcaption);
 
         const createImage = document.createElement("img");
-        createImage.src = artObject.webImage.url;
+        createImage.src = art.image;
         createFigure.appendChild(createImage);
     })
 };
@@ -38,8 +38,6 @@ export function renderDetail(id) {
         const image = object.webImage.url;
         const description = object.description;
         artContainer.style.display = "none";
-
-      
 
         const createTitle = document.createElement("h1");
         createTitle.textContent = title;

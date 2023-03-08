@@ -27,8 +27,15 @@ export function fetchData() {
             }
         })
         .then((data) => {
+            const filterData = data.artObjects.map(art => ({
+                number: art.objectNumber,
+                title: art.title,
+                image: art.webImage.url,
+                description: art.description,
+            }));
+            console.log(filterData)
             artContainer.textContent="";
-            render(data)   
+            render(filterData)   
     }).catch((error) => {
         console.log(error);
     })
