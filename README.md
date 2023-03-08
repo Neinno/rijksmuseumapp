@@ -133,6 +133,30 @@ export function router() {
 }
 ```
 
+###Data Filteren en sorteren
+Bij de rijksmuseum API krijg ik een hoop data terug waar ik bij mijn applicatie niks aan heb. Ik heb ervoor gekozen om vier verschillende dingen uit de API te halen.
+- De object number zodat ik dit kan gebruiken om een detail pagina te maken. Dit gebruik ik ook als de hash daarvan.
+- De titel. Dit laat ik zien op de overzicht pagina
+- Het plaatje, zodat je het kunst object ook kan zien.
+- De beschrijving. Deze heb ik nodig op de detail pagina.
+
+Om dit voor elkaar te krijgen heb ik een nieuwe variabele aangemaakt genaamd filterData.
+
+```js
+const filterData = data.artObjects.map(art => ({
+                number: art.objectNumber,
+                title: art.title,
+                image: art.webImage.url,
+                description: art.description,
+            }));
+```
+
+Deze stuur ik vervolgens weer door naar mijn render.js
+
+```js
+render(filterData)   
+```
+
 ### Checklist
 - [x] Opdracht kiezen
 - [x] Data fetch uit de API
