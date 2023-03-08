@@ -1,10 +1,13 @@
 import { render } from "./render.js";
 import { loader } from "./loader.js";
 
-export function searchObject() {
+export function searchObject(event) {
     const searchInput = document.querySelector('form input[name="searchbar"]').value
-    if(searchInput.length > 3)
-    fetchSearch(searchInput)
+    if(searchInput.length > 3) {
+        fetchSearch(searchInput)
+        window.location.hash = "#search/" + searchInput;
+    }
+   
 }
 
 export function fetchSearch(searchInput) {
