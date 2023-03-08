@@ -23,7 +23,7 @@ export function fetchSearch(searchInput) {
     const sortedBy = "chronologic";
     const resultAmount = "ps=20";
 
-    const url = urlApi+`?key=`+apikey+`&q=`+searchInput+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
+    const url = `${urlApi}?key=${apikey}&q=${searchInput}&${resultAmount}&${ifImage}&s=${sortedBy}`;
 
     const data = fetch(url)
 
@@ -35,8 +35,14 @@ export function fetchSearch(searchInput) {
             }
         })
         .then((data) => {
+            const filterData = data.artObjects.map(art => ({
+                number: art.objectNumber,
+                title: art.title,
+                image: art.webImage.url,
+                description: art.description,
+            }));
             artContainer.textContent="";
-            render(data)    
+            render(filterData)    
 
     }).catch((error) => {
         console.log(error);

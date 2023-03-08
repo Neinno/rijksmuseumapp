@@ -164,15 +164,25 @@ main section:nth-of-type(1) figure figcaption {
     width: 100%;
 }
 
+body section {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
 /* detail page */
 #detail-page {
     height: 100dvh;
-    position: absolute;
     top:0;
-    transform: translateX(-100%);
+    display: none;
     width: 100%;
     background-color: white;
     padding: 1em;
+    max-width: 25em;
+    position: absolute;
+    transform: translatex(-50%);
+    left: 50%;
 }
 
 #detail-page h1,
@@ -180,6 +190,7 @@ main section:nth-of-type(1) figure figcaption {
     background-color: var(--main-color);
     color: white;
     padding: 1em;
+    width: inherit;
 }
 
 #detail-page p {
@@ -187,10 +198,11 @@ main section:nth-of-type(1) figure figcaption {
 }
 
 .detail-slide {
-    transform: translateX(0%) !important;
+    display: block !important;
 }
 
 #detail-page img {
     width: 100%;
-    object-fit: cover;  
+    object-fit: cover; 
+    max-width: 25em;
 }

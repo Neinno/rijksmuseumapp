@@ -1,5 +1,7 @@
 const detailSection = document.getElementById("detail-page");
-const artContainer = document.querySelector('main > section:nth-of-type(1)');
+const mainContainer = document.querySelector('main');
+const headerContainer = document.querySelector('header')
+
 
 export function render(filterData) {   
     detailSection.innerHTML = "";
@@ -29,15 +31,17 @@ export function render(filterData) {
 export function renderDetail(id) {
     const urlApi = "https://www.rijksmuseum.nl/api/nl/collection";
     const apikey = "0TyrFANJ";
+    const url = `${urlApi}/${id}?key=${apikey}`
     
-    fetch(`${urlApi}/${id}?key=${apikey}`)
+    fetch(url)
       .then(response => response.json())
       .then(data => {
         const object = data.artObject;
         const title = object.title;
         const image = object.webImage.url;
         const description = object.description;
-        artContainer.style.display = "none";
+        mainContainer.style.display = "none";
+        headerContainer.style.display = "none";
 
         const createTitle = document.createElement("h1");
         createTitle.textContent = title;
@@ -57,7 +61,8 @@ export function renderDetail(id) {
           history.back();
           detailSection.classList.remove("detail-slide")
           detailSection.innerHTML = "";
-          artContainer.style.display = "grid";
+          mainContainer.style.display = "block";
+          headerContainer.style.display = "block";
         })
         detailSection.appendChild(createButton)
 

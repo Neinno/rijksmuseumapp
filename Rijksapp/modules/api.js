@@ -14,9 +14,8 @@ export function fetchData() {
     const ifImage = "imgonly=true";
     const sortedBy = "chronologic";
     const resultAmount = "ps=20";
-    // const objectId = "";
 
-    const url = urlApi+`?key=`+apikey+`&`+resultAmount+`&`+ifImage+`&s=`+sortedBy;
+    const url = `${urlApi}?key=${apikey}&${resultAmount}&${ifImage}&s=${sortedBy}`;
 
     const data = fetch(url)
         .then((response) => {
