@@ -39,15 +39,7 @@ export function renderDetail(id) {
         const description = object.description;
         artContainer.style.display = "none";
 
-        const createButton = document.createElement("button")
-        createButton.textContent = "sluiten";
-        createButton.addEventListener("click", () => {
-          history.back();
-          detailSection.classList.remove("detail-slide")
-          detailSection.innerHTML = "";
-          artContainer.style.display = "grid";
-        })
-        detailSection.appendChild(createButton)
+      
 
         const createTitle = document.createElement("h1");
         createTitle.textContent = title;
@@ -60,6 +52,16 @@ export function renderDetail(id) {
         const createDescription = document.createElement("p");
         createDescription.textContent = description;
         detailSection.appendChild(createDescription)
+
+        const createButton = document.createElement("button")
+        createButton.textContent = "sluiten";
+        createButton.addEventListener("click", () => {
+          history.back();
+          detailSection.classList.remove("detail-slide")
+          detailSection.innerHTML = "";
+          artContainer.style.display = "grid";
+        })
+        detailSection.appendChild(createButton)
 
         detailSection.classList.add("detail-slide")
       })

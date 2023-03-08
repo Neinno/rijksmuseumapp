@@ -82,16 +82,22 @@ main section:nth-of-type(1) {
 }
 
 #error button {
-    border: none;
     margin: 1em;
+}
+
+#error button,
+#detail-page button {
+    border: none;
     padding: 1em 2em;
     background-color: var(--secondary-color);
     color: white;
     transition: .5s;
-    border: 1px solid transparent
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
-#error button:hover {
+#error button:hover,
+#detail-page button:hover  {
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -166,6 +172,18 @@ main section:nth-of-type(1) figure figcaption {
     transform: translateX(-100%);
     width: 100%;
     background-color: white;
+    padding: 1em;
+}
+
+#detail-page h1,
+#detail-page p {
+    background-color: var(--main-color);
+    color: white;
+    padding: 1em;
+}
+
+#detail-page p {
+    margin: 1em 0;
 }
 
 .detail-slide {
