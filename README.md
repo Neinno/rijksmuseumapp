@@ -1,5 +1,15 @@
 # Web App From Scratch @cmda-minor-web 2021 - 2022
+
+# Table of contents
+1. [Introductie](#introductie)
+2. [How to Install](#HowToInstall)
+3. [Proces](#proces)
+3. [Checklist](#checklist)
+3. [Bronnen](#bronnen)
+
+## Introductie <a name="introductie"></a>
 Tijdens Web App From Scratch ben ik begonnen met het maken van een visite kaartje. Voor mij was dit vooral weer even oefenen met HTML, CSS en JS. Dit had ik namelijk een lange tijd niet gedaan.
+
 
 ### Link naar demo:
 https://neinno.github.io/rijksmuseumapp/Rijksapp/
@@ -21,7 +31,7 @@ Bij deze userstory hoort de API van het rijksmuseum.
 [Object meta data](https://data.rijksmuseum.nl/object-metadata/)
 
 
-### How to install:
+### How to install: <a name="HowToInstall"></a>
 Om dit project te instaleren op je eigen computer moet je deze repository clonen. Dit kan je doen door gebruik te maken github desktop, of gebruik te maken van je terminal en de volgende command uit te voeren.
 ```
 git clone https://github.com/Neinno/rijksmuseumapp.git
@@ -30,7 +40,7 @@ git clone https://github.com/Neinno/rijksmuseumapp.git
 Open daarna het project in VS code en zet live server aan om het vervolgens te bekijken op je eigen computer.
 
 
-## Proces
+## Proces <a name="proces"></a>
 
 ### Design
 Ik ben begonnen met het maken van een simpel design wat ik kan aanhouden tijdens het maken van de opdracht. Dit zorgt ervoor dat een bepaalde structuur volg in mijn styling. Ik heb ervoor gekozen om een zoekbalk, categorieën en een discover sectie toe te voegen. Ook is het de bedoeling dat er een detail pagina komt, die meer informatie geeft over het object of schilderij als er op geklikt word.
@@ -157,7 +167,7 @@ Deze stuur ik vervolgens weer door naar mijn render.js
 render(filterData)   
 ```
 
-### Checklist
+### Checklist <a name="checklist"></a>
 - [x] Opdracht kiezen
 - [x] Data fetch uit de API
 - [x] Data laten zien op het scherm
@@ -173,7 +183,7 @@ render(filterData)
 - [ ] Design verbeteren
 - [ ] CSS aanpassen
 
-### Bronnen
+### Bronnen <a name="bronnen"></a>
 - [Main repository van dit vak](https://github.com/cmda-minor-web/web-app-from-scratch-2223)
 - [RijksMuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
 - [Data Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
